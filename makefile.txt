@@ -1,0 +1,11 @@
+CC = gcc
+CFLAGS = -Wall -g
+TARGET = lab_Assignment6
+
+all: $(TARGET)
+
+$(TARGET): lab6.o
+	$(CC) $(CFLAGS) $^ -o $@
+
+lab6.o: lab_Assignment6.c
+	$(CC) $(CFLAGS) -c $< -o $@
