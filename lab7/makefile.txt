@@ -1,0 +1,16 @@
+# Makefile for lab assignment
+CC = gcc
+CFLAGS = -Wall
+TARGET = lab7
+SRC = lab_Assignment7.c
+OUTPUT_FILE = output.log
+
+all: $(TARGET)
+
+$(TARGET): $(SRC)
+	$(CC) $(CFLAGS) -o $(TARGET) $(SRC)
+
+run: $(TARGET)
+	./$(TARGET) sample.txt
+
+
